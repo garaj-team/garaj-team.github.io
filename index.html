@@ -25,7 +25,7 @@
   <div class="kap">
     <a class="marka" href="index.html"><img src="img/logo.webp" alt="" width="30" height="30">Garaj</a>
     <nav class="menu" aria-label="Ana menü">
-      <a href="index.html#nasil"><span data-l="tr">Nasıl çalışır</span><span data-l="en">How it works</span></a>
+      <a href="index.html#film"><span data-l="tr">Nasıl çalışır</span><span data-l="en">How it works</span></a>
       <a href="index.html#kartlar"><span data-l="tr">Kartlar</span><span data-l="en">Cards</span></a>
       <a href="index.html#oyun"><span data-l="tr">Oyun</span><span data-l="en">Game</span></a>
       <a href="index.html#sss"><span data-l="tr">SSS</span><span data-l="en">FAQ</span></a>
@@ -43,167 +43,220 @@
   </div>
 </header>
 <main id="icerik">
-<section class="giris" aria-labelledby="giris-baslik">
-  <div class="kap">
-    <h1 class="dev" id="giris-baslik">
-      <span data-l="tr">Sokaktaki her araba bir kart.</span>
-      <span data-l="en">Every car on the street is a card.</span>
-    </h1>
-    <div class="giris-yan">
-      <p>
-        <span data-l="tr">Garaj’da gördüğün gerçek arabaları fotoğrafla yakalarsın, her biri koleksiyonuna kart olarak girer. Nadir modelleri ara, arkadaşlarınla düello yap, haftalık sıralamada yüksel.</span>
-        <span data-l="en">In Garaj you catch real cars by photographing them, and each one joins your collection as a card. Hunt for rare models, duel your friends and climb the weekly leaderboard.</span>
-      </p>
-      <div class="magazalar">
-        <a class="magaza" data-play href="#" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.8v18.4c0 .5.5.8 1 .6l15.6-8.9c.5-.3.5-1 0-1.3L5 2.2c-.5-.2-1 .1-1 .6z"/></svg>
-          <span><small data-yakinda><span data-l="tr">Çok yakında</span><span data-l="en">Coming soon</span></small><small data-simdi><span data-l="tr">Hemen indir</span><span data-l="en">Get it on</span></small><b>Google Play</b></span>
-        </a>
-        <span class="magaza ikincil" aria-disabled="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
-          <span><small><span data-l="tr">Daha sonra</span><span data-l="en">Later</span></small><b>App Store</b></span>
-        </span>
+<section class="film" id="film" aria-labelledby="film-baslik">
+  <div class="film-sahne">
+    <canvas class="sokak" aria-hidden="true"></canvas>
+    <div class="karartma" aria-hidden="true"></div>
+
+    <div class="vizor" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <div class="tarama" aria-hidden="true"></div>
+    <div class="bilgi" aria-hidden="true"><small><span data-l="tr">Kasa</span><span data-l="en">Body</span></small><b>Coupe</b></div>
+    <div class="bilgi" aria-hidden="true"><small><span data-l="tr">Menşei</span><span data-l="en">Origin</span></small><b><span data-l="tr">Almanya</span><span data-l="en">Germany</span></b></div>
+    <div class="bilgi" aria-hidden="true"><small><span data-l="tr">Çekim</span><span data-l="en">Shot</span></small><b><span data-l="tr">Gece, bonus puan</span><span data-l="en">Night, bonus points</span></b></div>
+    <div class="film-flas" aria-hidden="true"></div>
+
+    <div class="deste" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <div class="film-kart" aria-hidden="true">
+      <div class="kart-don">
+        <div class="kart-on">
+          <div class="kart-ust"><span class="kart-nadir"><span data-l="tr">Efsanevi</span><span data-l="en">Legendary</span></span><span class="kart-yildiz">★★★</span></div>
+          <canvas></canvas>
+          <div class="kart-alt">
+            <span class="kart-ad">Coupe</span>
+            <span class="kart-puan"><s>TR</s><b data-puan>0</b></span>
+          </div>
+        </div>
+        <div class="kart-arka"><img src="img/logo.webp" alt="" width="64" height="64"></div>
       </div>
-      <p class="not-kucuk"><span data-l="tr">Ücretsiz. İsteğe bağlı uygulama içi satın almalar içerir.</span><span data-l="en">Free to play. Contains optional in-app purchases.</span></p>
+    </div>
+
+    <div class="altyazilar">
+      <div class="altyazi giris-yazi">
+        <h1 class="dev" id="film-baslik"><span data-l="tr">Sokaktaki her araba bir kart.</span><span data-l="en">Every car on the street is a card.</span></h1>
+        <p><span data-l="tr">Garaj’da gördüğün gerçek arabaları fotoğrafla yakalarsın, her biri koleksiyonuna kart olarak girer.</span><span data-l="en">In Garaj you catch real cars with your camera, and each one joins your collection as a card.</span></p>
+      </div>
+      <div class="altyazi">
+        <h2><span data-l="tr">Gözüne takılan arabaya kamerayı çevir.</span><span data-l="en">Point your camera at a car that catches your eye.</span></h2>
+        <p><span data-l="tr">Park halinde ya da yolda, fark etmez. Gece çekimi ek puan getirir.</span><span data-l="en">Parked or on the move, it doesn’t matter. Night shots earn bonus points.</span></p>
+      </div>
+      <div class="altyazi">
+        <h2><span data-l="tr">Birkaç saniyede tanınır.</span><span data-l="en">Recognised in seconds.</span></h2>
+        <p><span data-l="tr">Yapay zekâ markayı, modeli, kasa tipini, menşeini ve nadirliğini bulur.</span><span data-l="en">An AI model works out the make, model, body type, origin and rarity.</span></p>
+      </div>
+      <div class="altyazi">
+        <h2><span data-l="tr">Fotoğrafın sana ait bir karta dönüşür.</span><span data-l="en">Your photo becomes a card that’s yours.</span></h2>
+        <p><span data-l="tr">Her kartın kendi numarası ve puanı var.</span><span data-l="en">Every card has its own number and score.</span></p>
+      </div>
+      <div class="altyazi">
+        <h2><span data-l="tr">Ne kadar nadirse, o kadar değerli.</span><span data-l="en">The rarer the car, the more it’s worth.</span></h2>
+        <p><span data-l="tr">Yaygın, Nadir, Efsanevi ve Mistik. Ne çıkacağını yakalayınca görürsün.</span><span data-l="en">Common, Rare, Legendary and Mythic. You only find out once you’ve caught it.</span></p>
+      </div>
+      <div class="altyazi cagri">
+        <h2><span data-l="tr">İlk kartın bir sokak ötede.</span><span data-l="en">Your first card is one street away.</span></h2>
+        <div class="magazalar">
+          <a class="magaza" data-play href="#" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.8v18.4c0 .5.5.8 1 .6l15.6-8.9c.5-.3.5-1 0-1.3L5 2.2c-.5-.2-1 .1-1 .6z"/></svg>
+            <span><small data-yakinda><span data-l="tr">Çok yakında</span><span data-l="en">Coming soon</span></small><small data-simdi><span data-l="tr">Hemen indir</span><span data-l="en">Get it on</span></small><b>Google Play</b></span>
+          </a>
+        </div>
+        <p class="not-kucuk"><span data-l="tr">Ücretsiz. İsteğe bağlı uygulama içi satın almalar içerir.</span><span data-l="en">Free to play. Contains optional in-app purchases.</span></p>
+      </div>
+    </div>
+
+    <div class="ray" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="kaydir-ipucu" aria-hidden="true"><span data-l="tr">Kaydır</span><span data-l="en">Scroll</span><em></em></div>
+  </div>
+</section>
+
+<section class="bolum nadirlik" id="kartlar" aria-labelledby="kart-baslik">
+  <div class="kap">
+    <div class="bolum-ust">
+      <h2 class="baslik" id="kart-baslik"><span data-l="tr">Dört nadirlik, dört kaplama</span><span data-l="en">Four rarities, four finishes</span></h2>
+      <p class="alt-baslik"><span data-l="tr">Bir araba sokakta ne kadar az görülüyorsa, kartı o kadar değerli olur. Kaplaması da ona göre değişir.</span><span data-l="en">The rarer a car is on the road, the more its card is worth, and the finish changes with it.</span></p>
     </div>
   </div>
-</section>
-
-<div class="yol-sahne" role="img" aria-label="Yukarıdan görünen bir caddede akan arabalar. Bir arabaya tıklayınca yakalanır ve kartı aşağıda belirir." data-aria-en="Cars driving down a street seen from above. Click a car to catch it and its card appears below.">
-  <canvas></canvas>
-  <div class="yol-ust" aria-hidden="true">
-    <div class="kap">
-      <span class="ipucu"><span class="fare"><span data-l="tr">Bir arabaya nişan al, tıkla.</span><span data-l="en">Aim at a car and click.</span></span><span class="dokun"><span data-l="tr">Bir arabaya dokun.</span><span data-l="en">Tap a car.</span></span></span>
-      <span class="sayac"><span data-l="tr">Yakalanan</span><span data-l="en">Caught</span> <b data-sayac>0</b></span>
-    </div>
-  </div>
-  <div class="vizor" aria-hidden="true"><span class="flas"></span><i></i><i></i><i></i><i></i><b></b></div>
-</div>
-
-<section class="tepsi" aria-label="Yakaladıkların">
-  <div class="kap">
-    <p class="tepsi-baslik"><strong><span data-l="tr">Yakaladıkların</span><span data-l="en">Your catches</span></strong><span data-l="tr">Ne çıkacağını yakalayınca görürsün.</span><span data-l="en">You only find out what it is once you catch it.</span></p>
-    <ul class="tepsi-liste" aria-live="polite"><li class="tepsi-bos"><span data-l="tr">Henüz bir şey yakalamadın.</span><span data-l="en">Nothing caught yet.</span></li></ul>
-  </div>
-</section>
-
-<section class="bolum" id="nasil" aria-labelledby="nasil-baslik">
-  <div class="kap">
-    <h2 class="baslik" id="nasil-baslik"><span data-l="tr">Uygulamada da aynısı, gerçek arabalarla</span><span data-l="en">Same idea in the app, with real cars</span></h2>
-    <p class="alt-baslik"><span data-l="tr">Gözüne takılan arabaya kamerayı çevirmen yeter. Gerisini Garaj halleder.</span><span data-l="en">Point the camera at a car that catches your eye. Garaj does the rest.</span></p>
-    <ol class="rota">
-      <li>
-        <span class="durak" aria-hidden="true">1</span>
-        <h3><span data-l="tr">Fotoğrafını çek</span><span data-l="en">Take the photo</span></h3>
-        <p><span data-l="tr">Park halindeki ya da yoldan geçen arabayı uygulamanın kamerasıyla çek. Gece çekimi ve hareket halindeki araba ek puan getirir.</span><span data-l="en">Shoot a parked or passing car with the in-app camera. Night shots and moving cars earn bonus points.</span></p>
-      </li>
-      <li>
-        <span class="durak" aria-hidden="true">2</span>
-        <h3><span data-l="tr">Marka ve model tanınır</span><span data-l="en">Make and model are recognised</span></h3>
-        <p><span data-l="tr">Yapay zekâ fotoğrafa bakar; markayı, modeli ve nadirliği birkaç saniyede bulur.</span><span data-l="en">An AI model looks at the photo and works out the make, model and rarity in a few seconds.</span></p>
-      </li>
-      <li>
-        <span class="durak" aria-hidden="true">3</span>
-        <h3><span data-l="tr">Kart koleksiyonuna girer</span><span data-l="en">The card joins your collection</span></h3>
-        <p><span data-l="tr">Her araba kendi puanıyla bir kart olur. Bir markanın bütün modellerini topladığında rozet kazanırsın.</span><span data-l="en">Each car becomes a card with its own score. Complete a brand’s line-up to earn a badge.</span></p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="bolum" id="kartlar" aria-labelledby="kart-baslik">
-  <div class="kap">
-    <h2 class="baslik" id="kart-baslik"><span data-l="tr">Dört nadirlik, dört malzeme</span><span data-l="en">Four rarities, four finishes</span></h2>
-    <p class="alt-baslik"><span data-l="tr">Bir araba sokakta ne kadar az görülüyorsa, kartı o kadar değerli olur.</span><span data-l="en">The rarer a car is on the road, the more its card is worth.</span></p>
-    <div class="malzemeler">
-      <figure class="malzeme">
-        <div class="panel p0"><span class="yildiz" aria-hidden="true">★</span><span class="ad"><span data-l="tr">Yaygın</span><span data-l="en">Common</span></span></div>
-        <figcaption><span data-l="tr">Her gün yolda gördüklerin. Koleksiyonun temeli bunlar.</span><span data-l="en">The cars you pass every day. Every collection starts here.</span></figcaption>
-      </figure>
-      <figure class="malzeme">
-        <div class="panel p1"><span class="yildiz" aria-hidden="true">★★</span><span class="ad"><span data-l="tr">Nadir</span><span data-l="en">Rare</span></span></div>
-        <figcaption><span data-l="tr">Performans modelleri ve dönüp ikinci kez baktığın arabalar.</span><span data-l="en">Performance models and cars you turn to look at twice.</span></figcaption>
-      </figure>
-      <figure class="malzeme">
-        <div class="panel p2"><span class="yildiz" aria-hidden="true">★★★</span><span class="ad"><span data-l="tr">Efsanevi</span><span data-l="en">Legendary</span></span></div>
-        <figcaption><span data-l="tr">Klasikler ve süper arabalar. Görünce durursun.</span><span data-l="en">Classics and supercars. The ones that stop you in your tracks.</span></figcaption>
-      </figure>
-      <figure class="malzeme">
-        <div class="panel p3"><span class="yildiz" aria-hidden="true">★★★★</span><span class="ad"><span data-l="tr">Mistik</span><span data-l="en">Mythic</span></span></div>
-        <figcaption><span data-l="tr">Yolda neredeyse hiç görülmeyenler. Kartları hologram kaplamalı.</span><span data-l="en">Almost never seen on the road. Their cards come in holographic foil.</span></figcaption>
-      </figure>
-    </div>
+  <div class="raf" tabindex="0" aria-label="Nadirlikler">
+      <article class="nk n0">
+        <div class="nk-kart" aria-hidden="true">
+          <div class="nk-ic">
+            <div class="nk-ust"><b><span data-l="tr">Yaygın</span><span data-l="en">Common</span></b><i>★</i></div>
+            <canvas class="mini-foto" data-ton="0"></canvas>
+            <div class="nk-alt"><span class="nk-sik"><i class="dolu"></i><i class="dolu"></i><i class="dolu"></i><i class="dolu"></i></span><em><span data-l="tr">Her sokakta</span><span data-l="en">On every street</span></em></div>
+          </div>
+        </div>
+        <h3><span data-l="tr">Yaygın</span><span data-l="en">Common</span></h3>
+        <p><span data-l="tr">Her gün yolda gördüğün arabalar. Koleksiyonun temeli bunlar.</span><span data-l="en">The cars you pass every day. Every collection starts here.</span></p>
+      </article>
+      <article class="nk n1">
+        <div class="nk-kart" aria-hidden="true">
+          <div class="nk-ic">
+            <div class="nk-ust"><b><span data-l="tr">Nadir</span><span data-l="en">Rare</span></b><i>★★</i></div>
+            <canvas class="mini-foto" data-ton="1"></canvas>
+            <div class="nk-alt"><span class="nk-sik"><i class="dolu"></i><i class="dolu"></i><i class="dolu"></i><i></i></span><em><span data-l="tr">Dikkatli bakarsan</span><span data-l="en">If you look closely</span></em></div>
+          </div>
+        </div>
+        <h3><span data-l="tr">Nadir</span><span data-l="en">Rare</span></h3>
+        <p><span data-l="tr">Performans modelleri ve dönüp ikinci kez baktığın arabalar.</span><span data-l="en">Performance models and cars you turn to look at twice.</span></p>
+      </article>
+      <article class="nk n2">
+        <div class="nk-kart" aria-hidden="true">
+          <div class="nk-ic">
+            <div class="nk-ust"><b><span data-l="tr">Efsanevi</span><span data-l="en">Legendary</span></b><i>★★★</i></div>
+            <canvas class="mini-foto" data-ton="2"></canvas>
+            <div class="nk-alt"><span class="nk-sik"><i class="dolu"></i><i class="dolu"></i><i></i><i></i></span><em><span data-l="tr">Şanslıysan</span><span data-l="en">If you’re lucky</span></em></div>
+          </div>
+        </div>
+        <h3><span data-l="tr">Efsanevi</span><span data-l="en">Legendary</span></h3>
+        <p><span data-l="tr">Klasikler ve süper arabalar. Görünce durursun.</span><span data-l="en">Classics and supercars. The ones that stop you in your tracks.</span></p>
+      </article>
+      <article class="nk n3">
+        <div class="nk-kart" aria-hidden="true">
+          <div class="nk-ic">
+            <div class="nk-ust"><b><span data-l="tr">Mistik</span><span data-l="en">Mythic</span></b><i>★★★★</i></div>
+            <canvas class="mini-foto" data-ton="3"></canvas>
+            <div class="nk-alt"><span class="nk-sik"><i class="dolu"></i><i></i><i></i><i></i></span><em><span data-l="tr">Neredeyse hiç</span><span data-l="en">Almost never</span></em></div>
+          </div>
+        </div>
+        <h3><span data-l="tr">Mistik</span><span data-l="en">Mythic</span></h3>
+        <p><span data-l="tr">Yolda neredeyse hiç görülmeyenler. Kartları hologram kaplamalı.</span><span data-l="en">Almost never seen on the road. Their cards come in holographic foil.</span></p>
+      </article>
   </div>
 </section>
 
-<section class="bolum teknik" id="oyun" aria-labelledby="oyun-baslik">
+<section class="bolum oyun" id="oyun" aria-labelledby="oyun-baslik">
   <div class="kap">
-    <div class="sol">
+    <div class="bolum-ust">
       <h2 class="baslik" id="oyun-baslik"><span data-l="tr">Yakaladıktan sonra</span><span data-l="en">After the catch</span></h2>
       <p class="alt-baslik"><span data-l="tr">Kartlar albümde beklemez. Onlarla yarışır, takas eder, kulübünü taşırsın.</span><span data-l="en">Cards don’t just sit in an album. You race them, trade them and carry your club with them.</span></p>
     </div>
-    <dl class="ozellik-listesi">
-      <div>
-        <dt><span data-l="tr">Kart düellosu</span><span data-l="en">Card duels</span></dt>
-        <dd class="deger"><span data-l="tr">5 kartlık deste</span><span data-l="en">5-card deck</span></dd>
-        <dd><span data-l="tr">Arkadaşına ya da rastgele bir rakibe karşı oyna. Her turun kuralı farklı: en yüksek puan, en nadir kart, menşei, kasa tipi.</span><span data-l="en">Play a friend or a random rival. Every round has its own rule: highest score, rarest card, country of origin, body type.</span></dd>
+    <div class="modlar">
+      <div class="mod-sekmeler" role="tablist" aria-label="Oyun modları">
+        <button class="mod-sekme" role="tab" id="sek-duello" aria-controls="mod-duello" aria-selected="true" tabindex="0" data-mod="duello">
+          <span class="mod-ad"><span data-l="tr">Kart düellosu</span><span data-l="en">Card duels</span></span>
+          <span class="mod-deger"><span data-l="tr">5 kartlık deste</span><span data-l="en">5-card deck</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-etkinlik" aria-controls="mod-etkinlik" aria-selected="false" tabindex="-1" data-mod="etkinlik">
+          <span class="mod-ad"><span data-l="tr">Haftalık etkinlik</span><span data-l="en">Weekly event</span></span>
+          <span class="mod-deger"><span data-l="tr">Her hafta yeni tema</span><span data-l="en">New theme weekly</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-kulup" aria-controls="mod-kulup" aria-selected="false" tabindex="-1" data-mod="kulup">
+          <span class="mod-ad"><span data-l="tr">Kulüpler</span><span data-l="en">Clubs</span></span>
+          <span class="mod-deger"><span data-l="tr">30 üyeye kadar</span><span data-l="en">Up to 30 members</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-takas" aria-controls="mod-takas" aria-selected="false" tabindex="-1" data-mod="takas">
+          <span class="mod-ad"><span data-l="tr">Kart takası</span><span data-l="en">Card trading</span></span>
+          <span class="mod-deger"><span data-l="tr">Aynı nadirlikte</span><span data-l="en">Same rarity</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-birlestir" aria-controls="mod-birlestir" aria-selected="false" tabindex="-1" data-mod="birlestir">
+          <span class="mod-ad"><span data-l="tr">Birleştirme</span><span data-l="en">Merging</span></span>
+          <span class="mod-deger"><span data-l="tr">10 kart, 1 üst seviye</span><span data-l="en">10 cards into 1</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-garaj" aria-controls="mod-garaj" aria-selected="false" tabindex="-1" data-mod="garaj">
+          <span class="mod-ad"><span data-l="tr">Garajlar</span><span data-l="en">Garages</span></span>
+          <span class="mod-deger"><span data-l="tr">Stickerla açılır</span><span data-l="en">Opened with stickers</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
+        <button class="mod-sekme" role="tab" id="sek-butik" aria-controls="mod-butik" aria-selected="false" tabindex="-1" data-mod="butik">
+          <span class="mod-ad"><span data-l="tr">Butik</span><span data-l="en">Boutique</span></span>
+          <span class="mod-deger"><span data-l="tr">Kendi plakan</span><span data-l="en">Your own plate</span></span>
+          <span class="mod-sure" aria-hidden="true"></span>
+        </button>
       </div>
-      <div>
-        <dt><span data-l="tr">Haftalık etkinlik</span><span data-l="en">Weekly event</span></dt>
-        <dd class="deger"><span data-l="tr">Her hafta yeni tema</span><span data-l="en">New theme weekly</span></dd>
-        <dd><span data-l="tr">Japon haftası, SUV haftası… Temaya uyan arabaları yakala, ilk sıralara gir.</span><span data-l="en">Japanese week, SUV week… Catch cars that fit the theme and finish near the top.</span></dd>
+      <div class="mod-sahne">
+        <div class="mod-panel" role="tabpanel" id="mod-duello" aria-labelledby="sek-duello">
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-duello"><div class="el sol"><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i></div><b class="vs">VS</b><div class="el sag"><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i></div><div class="turlar"><i class="k"></i><i class="k"></i><i class="r"></i><i></i><i></i></div><span class="cip"><span data-l="tr">Tur 3: En nadir kart</span><span data-l="en">Round 3: Rarest card</span></span></div></div>
+          <p><span data-l="tr">Arkadaşına ya da rastgele bir rakibe karşı oyna. Her turun kuralı farklı: en yüksek puan, en nadir kart, menşei, kasa tipi.</span><span data-l="en">Play a friend or a random rival. Every round has its own rule: highest score, rarest card, country of origin, body type.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-etkinlik" aria-labelledby="sek-etkinlik" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-etkinlik"><span class="cip"><span data-l="tr">Bu hafta</span><span data-l="en">This week</span></span><strong><span data-l="tr">SUV Haftası</span><span data-l="en">SUV Week</span></strong><div class="gunler"><i class="gecti"><span data-l="tr">Pzt</span><span data-l="en">Mon</span></i><i class="gecti"><span data-l="tr">Sal</span><span data-l="en">Tue</span></i><i class="gecti"><span data-l="tr">Çar</span><span data-l="en">Wed</span></i><i class="bugun"><span data-l="tr">Per</span><span data-l="en">Thu</span></i><i class=""><span data-l="tr">Cum</span><span data-l="en">Fri</span></i><i class=""><span data-l="tr">Cmt</span><span data-l="en">Sat</span></i><i class=""><span data-l="tr">Paz</span><span data-l="en">Sun</span></i></div><div class="siralama"><span>1</span><span>2</span><span class="sen">3</span></div></div></div>
+          <p><span data-l="tr">Japon haftası, SUV haftası… Temaya uyan arabaları yakala, ilk sıralara gir.</span><span data-l="en">Japanese week, SUV week… Catch cars that fit the theme and finish near the top.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-kulup" aria-labelledby="sek-kulup" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-kulup"><div class="amblem"><svg viewBox="0 0 64 72" aria-hidden="true"><path d="M32 2 60 12v22c0 18-12 30-28 36C16 64 4 52 4 34V12Z"/><path class="ic" d="M32 18l5 10 11 1.5-8 7.5 2 11-10-5.5-10 5.5 2-11-8-7.5 11-1.5Z"/></svg></div><div class="uyeler"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>+23</b></div><div class="cubuklar"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:47%"></i><i style="--h:70%"></i><i style="--h:64%"></i><i style="--h:88%"></i><i style="--h:76%"></i></div></div></div>
+          <p><span data-l="tr">Üyelerin topladığı puanlar kulübe yazılır. Haftanın en iyi kulüpleri ödül alır.</span><span data-l="en">Members’ points count for the club, and the week’s best clubs earn rewards.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-takas" aria-labelledby="sek-takas" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-takas"><i class="mk buyuk n1"></i><svg viewBox="0 0 120 70" aria-hidden="true"><path d="M10 24h92m-12-12 12 12-12 12"/><path d="M110 50H18m12-12-12 12 12 12"/></svg><i class="mk buyuk n1 ikinci"></i><span class="cip"><span data-l="tr">Nadir ↔ Nadir</span><span data-l="en">Rare ↔ Rare</span></span></div></div>
+          <p><span data-l="tr">Fazla kartını, arkadaşının sende olmayan bir kartıyla değiş.</span><span data-l="en">Swap a spare card for one of a friend’s cards that you’re missing.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-birlestir" aria-labelledby="sek-birlestir" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-birlestir"><div class="on"><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i><i class="mk"></i></div><svg viewBox="0 0 60 24" aria-hidden="true"><path d="M4 12h48m-10-9 10 9-10 9"/></svg><i class="mk buyuk n2"></i></div></div>
+          <p><span data-l="tr">Aynı nadirlikteki on kartı birleştir, bir üst nadirlikten yeni bir kart al.</span><span data-l="en">Merge ten cards of one rarity into a new card of the next rarity up.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-garaj" aria-labelledby="sek-garaj" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-garaj"><div class="kapi"><div class="panjur"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><i class="mk buyuk n3"></i></div><span class="cip"><span data-l="tr">Görev ödülü: sticker</span><span data-l="en">Mission reward: stickers</span></span></div></div>
+          <p><span data-l="tr">Görevlerden kazandığın stickerlarla garaj aç, içinden çıkan kartı koleksiyonuna ekle.</span><span data-l="en">Use stickers earned from missions to open garages and add the card inside to your collection.</span></p>
+        </div>
+        <div class="mod-panel" role="tabpanel" id="mod-butik" aria-labelledby="sek-butik" hidden>
+          <div class="mod-gorsel" aria-hidden="true"><div class="g-butik"><div class="avatar"><span></span></div><div class="isim-plaka"><s>TR</s>CANIM</div><div class="temalar"><i></i><i></i><i></i><i></i></div></div></div>
+          <p><span data-l="tr">Hareketli avatar çerçeveleri, profil temaları ve üstüne istediğin yazıyı yazdığın isim plakaları.</span><span data-l="en">Animated avatar frames, profile themes and name plates with your own text.</span></p>
+        </div>
       </div>
-      <div>
-        <dt><span data-l="tr">Kulüpler</span><span data-l="en">Clubs</span></dt>
-        <dd class="deger"><span data-l="tr">30 üyeye kadar</span><span data-l="en">Up to 30 members</span></dd>
-        <dd><span data-l="tr">Üyelerin topladığı puanlar kulübe yazılır. Haftanın en iyi kulüpleri ödül alır.</span><span data-l="en">Members’ points count for the club, and the week’s best clubs earn rewards.</span></dd>
-      </div>
-      <div>
-        <dt><span data-l="tr">Kart takası</span><span data-l="en">Card trading</span></dt>
-        <dd class="deger"><span data-l="tr">Aynı nadirlikte</span><span data-l="en">Same rarity</span></dd>
-        <dd><span data-l="tr">Fazla kartını, arkadaşının sende olmayan bir kartıyla değiş.</span><span data-l="en">Swap a spare card for one of a friend’s cards that you’re missing.</span></dd>
-      </div>
-      <div>
-        <dt><span data-l="tr">Birleştirme</span><span data-l="en">Merging</span></dt>
-        <dd class="deger"><span data-l="tr">10 kart, 1 üst seviye</span><span data-l="en">10 cards into 1</span></dd>
-        <dd><span data-l="tr">Aynı nadirlikteki on kartı birleştir, bir üst nadirlikten yeni bir kart al.</span><span data-l="en">Merge ten cards of one rarity into a new card of the next rarity up.</span></dd>
-      </div>
-      <div>
-        <dt><span data-l="tr">Garajlar</span><span data-l="en">Garages</span></dt>
-        <dd class="deger"><span data-l="tr">Stickerla açılır</span><span data-l="en">Opened with stickers</span></dd>
-        <dd><span data-l="tr">Görevlerden kazandığın stickerlarla garaj aç, içinden çıkan kartı koleksiyonuna ekle.</span><span data-l="en">Use stickers earned from missions to open garages and add the card inside to your collection.</span></dd>
-      </div>
-      <div>
-        <dt><span data-l="tr">Butik</span><span data-l="en">Boutique</span></dt>
-        <dd class="deger"><span data-l="tr">Kendi plakan</span><span data-l="en">Your own plate</span></dd>
-        <dd><span data-l="tr">Hareketli avatar çerçeveleri, profil temaları ve üstüne istediğin yazıyı yazdığın isim plakaları.</span><span data-l="en">Animated avatar frames, profile themes and name plates with your own text.</span></dd>
-      </div>
-    </dl>
+    </div>
   </div>
 </section>
 
 <section class="bolum guven" aria-labelledby="guven-baslik">
   <div class="kap">
-    <div>
-      <h2 class="baslik" id="guven-baslik"><span data-l="tr">Fotoğrafların senin</span><span data-l="en">Your photos are yours</span></h2>
-      <div class="guven-link">
-        <a href="gizlilik.html"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span></a>
-        <a href="hesap-silme.html"><span data-l="tr">Hesap ve veri silme</span><span data-l="en">Account &amp; data deletion</span></a>
+    <div class="guven-kutu">
+      <div class="guven-sol">
+        <h2 class="baslik" id="guven-baslik"><span data-l="tr">Fotoğrafların senin</span><span data-l="en">Your photos are yours</span></h2>
+        <div class="guven-link">
+          <a href="gizlilik.html"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span></a>
+          <a href="hesap-silme.html"><span data-l="tr">Hesap ve veri silme</span><span data-l="en">Account &amp; data deletion</span></a>
+        </div>
       </div>
-    </div>
-    <div class="guven-liste">
-      <div>
-        <h3><span data-l="tr">Varsayılan olarak gizli</span><span data-l="en">Private by default</span></h3>
-        <p><span data-l="tr">Çektiğin fotoğrafları sen açmadıkça kimse göremez. Profilinde sadece kartların görünür.</span><span data-l="en">Nobody sees the photos you take unless you choose to share them. Your profile shows only your cards.</span></p>
-      </div>
-      <div>
-        <h3><span data-l="tr">Konum bilgisi yok</span><span data-l="en">No location data</span></h3>
-        <p><span data-l="tr">Uygulama konum izni istemez. Galeriden seçtiğin fotoğrafların konum bilgisi de okunmaz.</span><span data-l="en">The app never asks for location access, and location data in photos from your gallery is never read.</span></p>
-      </div>
-      <div>
-        <h3><span data-l="tr">İstediğin an silinir</span><span data-l="en">Deleted whenever you want</span></h3>
-        <p><span data-l="tr">Hesabını ve bütün verilerini uygulamanın Ayarlar ekranından silebilirsin.</span><span data-l="en">You can delete your account and all your data from the app’s Settings screen.</span></p>
-      </div>
+      <ul class="guven-liste">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><div><h3><span data-l="tr">Varsayılan olarak gizli</span><span data-l="en">Private by default</span></h3><p><span data-l="tr">Çektiğin fotoğrafları sen açmadıkça kimse göremez. Profilinde sadece kartların görünür.</span><span data-l="en">Nobody sees the photos you take unless you choose to share them. Your profile shows only your cards.</span></p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/><path d="M4 4l16 16"/></svg><div><h3><span data-l="tr">Konum bilgisi yok</span><span data-l="en">No location data</span></h3><p><span data-l="tr">Uygulama konum izni istemez. Galeriden seçtiğin fotoğrafların konum bilgisi de okunmaz.</span><span data-l="en">The app never asks for location access, and location data in photos from your gallery is never read.</span></p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 7h15M9.5 7V4.8h5V7M6.5 7l1 13h9l1-13"/><path d="M10.5 11v5.5M13.5 11v5.5"/></svg><div><h3><span data-l="tr">İstediğin an silinir</span><span data-l="en">Deleted whenever you want</span></h3><p><span data-l="tr">Hesabını ve bütün verilerini uygulamanın Ayarlar ekranından silebilirsin.</span><span data-l="en">You can delete your account and all your data from the app’s Settings screen.</span></p></div></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -236,13 +289,13 @@
   </div>
 </section>
 
-<section class="son" aria-labelledby="son-baslik">
+<section class="son gece" aria-labelledby="son-baslik">
   <div class="kap">
     <div class="plaka" aria-hidden="true">
       <div class="ulke">TR</div>
       <div class="yazi"><span class="harf">3</span><span class="harf">4</span><span class="bosluk"></span><span class="harf">G</span><span class="harf">R</span><span class="harf">J</span><span class="bosluk"></span><span class="harf">2</span><span class="harf">0</span><span class="harf">2</span><span class="harf">6</span></div>
     </div>
-    <h2 class="baslik" id="son-baslik"><span data-l="tr">İlk kartın bir sokak ötede</span><span data-l="en">Your first card is one street away</span></h2>
+    <h2 class="baslik" id="son-baslik"><span data-l="tr">Sokak seni bekliyor</span><span data-l="en">The street is waiting</span></h2>
     <p class="alt-baslik"><span data-yakinda><span data-l="tr">Garaj çok yakında Google Play’de.</span><span data-l="en">Garaj is coming to Google Play soon.</span></span><span data-simdi><span data-l="tr">Garaj şimdi Google Play’de.</span><span data-l="en">Garaj is out now on Google Play.</span></span></p>
     <div class="magazalar">
       <a class="magaza" data-play href="#" rel="noopener">
@@ -277,6 +330,6 @@
     <p class="telif">© <span data-ayar="yil">2026</span> <span data-ayar="gelistirici">Garaj</span>. <span data-l="tr">Araba markaları ve modelleri sahiplerinin ticari markalarıdır; Garaj bu markalarla bağlantılı değildir.</span><span data-l="en">Car brands and model names are trademarks of their owners; Garaj is not affiliated with them.</span></p>
   </div>
 </footer>
-<script src="yol.js" defer></script>
+<script src="film.js" defer></script>
 </body>
 </html>
