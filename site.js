@@ -7,6 +7,13 @@ const AYAR = {
   gelistirici: 'Ticen', // ← geliştiricinin adı (Play Console'daki geliştirici adıyla aynı olmalı)
   playLinki: 'https://play.google.com/store/apps/details?id=com.enestaskiran.garaj',
   playYayinda: false, // uygulama Play Store'da herkese açılınca true yap
+  // Sosyal medya kullanıcı adları (başında @ olmadan). Boş bırakılan "Yakında" görünür.
+  sosyal: {
+    instagram: '',
+    tiktok: '',
+    youtube: '',
+    x: '',
+  },
 };
 
 (function () {
@@ -68,6 +75,20 @@ const AYAR = {
       if (el.tagName === 'A') el.href = 'mailto:' + AYAR.eposta;
     });
     document.querySelectorAll('[data-ayar="gelistirici"]').forEach((el) => (el.textContent = AYAR.gelistirici));
+    const SOS_URL = { instagram: 'https://instagram.com/', tiktok: 'https://www.tiktok.com/@', youtube: 'https://www.youtube.com/@', x: 'https://x.com/' };
+    document.querySelectorAll('[data-sosyal]').forEach((el) => {
+      const k = el.dataset.sosyal, ad = (AYAR.sosyal[k] || '').replace(/^@/, '');
+      const yazi = el.querySelector('[data-sosyal-ad]');
+      if (ad) {
+        el.href = SOS_URL[k] + ad;
+        if (yazi) yazi.textContent = '@' + ad;
+      } else {
+        el.classList.add('yakinda');
+        el.removeAttribute('href');
+        el.setAttribute('aria-disabled', 'true');
+        if (yazi) yazi.innerHTML = '<span data-l="tr">Yakında</span><span data-l="en">Coming soon</span>';
+      }
+    });
     document.querySelectorAll('[data-ayar="yil"]').forEach((el) => (el.textContent = String(new Date().getFullYear())));
     document.querySelectorAll(AYAR.playYayinda ? '[data-yakinda]' : '[data-simdi]').forEach((x) => x.remove());
     document.querySelectorAll('[data-play]').forEach((el) => {
