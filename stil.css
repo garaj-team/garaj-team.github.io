@@ -2100,3 +2100,29 @@ html[lang='en'] [data-l='tr'] {
 .alt-sosyal a:hover { border-color: var(--mavi); color: var(--mavi-yazi); }
 .alt-sosyal a.yakinda { opacity: 0.45; pointer-events: none; }
 .alt-sosyal svg { width: 20px; height: 20px; }
+
+/* ---------- Üst çubuk: İndir düğmesi ---------- */
+.ust-indir {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 15px 0 12px;
+  border-radius: 999px;
+  background: var(--mavi);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 4px;
+  transition: filter 0.15s;
+}
+.ust-indir svg { width: 14px; height: 14px; flex: none; }
+.ust-indir:hover { filter: brightness(1.1); }
+.ust-indir:focus-visible { outline: 2px solid var(--mavi); outline-offset: 3px; }
+.altyazi.giris-yazi { pointer-events: auto; }
+.altyazi.giris-yazi .magaza { background: #fff; color: #0b0e13; }
+@media (max-width: 420px) {
+  .ust-indir { padding: 0 12px; }
+  .ust-indir svg { display: none; }
+}

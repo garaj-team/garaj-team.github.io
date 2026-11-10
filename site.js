@@ -6,7 +6,7 @@ const AYAR = {
   eposta: 'destek@garajteam.com', // ← iletişim / destek e-postan
   gelistirici: 'Ticen', // ← geliştiricinin adı (Play Console'daki geliştirici adıyla aynı olmalı)
   playLinki: 'https://play.google.com/store/apps/details?id=com.enestaskiran.garaj',
-  playYayinda: false, // uygulama Play Store'da herkese açılınca true yap
+  playYayinda: true, // uygulama Play Store'da herkese açılınca true yap
   // Sosyal medya kullanıcı adları (başında @ olmadan). Boş bırakılan "Yakında" görünür.
   sosyal: {
     instagram: 'teamgaraj',
