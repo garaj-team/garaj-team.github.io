@@ -9,10 +9,10 @@ const AYAR = {
   playYayinda: false, // uygulama Play Store'da herkese açılınca true yap
   // Sosyal medya kullanıcı adları (başında @ olmadan). Boş bırakılan "Yakında" görünür.
   sosyal: {
-    instagram: '',
-    tiktok: '',
-    youtube: '',
-    x: '',
+    instagram: 'teamgaraj',
+    tiktok: 'teamgaraj',
+    youtube: 'TeamGaraj',
+    x: 'TeamGaraj',
   },
 };
 
